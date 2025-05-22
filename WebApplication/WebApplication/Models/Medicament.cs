@@ -8,4 +8,6 @@ public class Medicament
     [MaxLength(100)] public string Name { get; set; } = null!;
     [MaxLength(100)] public string Description { get; set; } = null!;
     [MaxLength(100)] public string Type { get; set; } = null!;
+    
+    public virtual ICollection<PrescriptionMedicament> PrescriptionMedicaments { get; set; } = null!;
 }
