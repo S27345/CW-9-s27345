@@ -18,6 +18,8 @@ public class Prescription
     [ForeignKey(nameof(IdDoctor))]
     public virtual Doctor Doctor { get; set; } = null!;
     
+    public virtual ICollection<PrescriptionMedicament> PrescriptionMedicaments { get; set; } = null!;
+    
 
     
 }
