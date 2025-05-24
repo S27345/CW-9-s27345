@@ -39,7 +39,7 @@ public class AppDbContext : DbContext
             IdPatient = 1,
             FirstName = "Patient",
             LastName = "Patient",
-            Email = "Patient@ihavegreatnamingconventions.com"
+            Birthdate = DateOnly.Parse("1999-09-19"),
         };
 
         var Prescription = new Prescription

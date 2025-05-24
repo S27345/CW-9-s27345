@@ -15,6 +15,7 @@ public class PrescriptionMedicament
     
     [ForeignKey(nameof(IdMedicament))]
     public virtual Medicament Medicament { get; set; } = null!;
+    
     [ForeignKey(nameof(IdPrescription))]
     public virtual Doctor Doctor { get; set; } = null!;
 }

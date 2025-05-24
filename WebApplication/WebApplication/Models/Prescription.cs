@@ -11,11 +11,13 @@ public class Prescription
     public DateOnly DueDate { get; set; }
     public int IdPatient { get; set; } 
     public int IdDoctor { get; set; }
-
-    [ForeignKey(nameof(IdDoctor))]
-    public virtual Doctor Doctor { get; set; }
     
     [ForeignKey(nameof(IdPatient))]
-    public virtual Patient Patient { get; set; }
+    public virtual Patient Patient { get; set; } = null!;
+
+    [ForeignKey(nameof(IdDoctor))]
+    public virtual Doctor Doctor { get; set; } = null!;
+    
+
     
 }
