@@ -16,15 +16,16 @@ public class GetpatientPrescriptionDto
     public int IdPrescription { get; set; }
     public DateOnly Date { get; set; }
     public DateOnly DueDate { get; set; }
-    public GetPrescriptionMedicamentDto PrescriptionMedicament { get; set; } = null!;
+    public ICollection<GetPrescriptionMedicamentDto> PrescriptionMedicaments { get; set; } = null!;
+    public GetDoctorDto Doctor { get; set; } = null!;
 }
 
 public class GetPrescriptionMedicamentDto
 {
     public int IdMedicament { get; set; }
-    public GetMedicamentDto Medicaments { get; set; } = null!;
+    public GetMedicamentDto Medicament { get; set; } = null!;
     public int? Dose { get; set; }
-    public string Description { get; set; } = null!;
+    public string Details { get; set; } = null!;
 }
 
 public class GetMedicamentDto
@@ -32,4 +33,10 @@ public class GetMedicamentDto
     public string Name { get; set; }
     public string Description { get; set; }
     
+}
+
+public class GetDoctorDto
+{
+    public int IdDoctor { get; set; }
+    public string FirstName { get; set; } = null!;
 }
